@@ -22,15 +22,24 @@
       }
     </style>
   </head>
-  <body>     
-        <div>
-        <h1><%= currentFoodItem.itemName %></h1>
-        <p>PRICE: <%= currentFoodItem.price%></p>
-        <p>PostedTime: <%= currentFoodItem.time%></p>
-        <p>OrderNote: <%= currentFoodItem.price%></p>
-        <p>Location: <%= currentFoodItem.location%></p>
-        <img src="<%= currentFoodItem.img %>" />
-        <p>Description<%= currentFoodItem.description %></p>   
-        </div>
+  <body>
+    <div id="header">
+      <h1>HOME FOOD</h1>
+    </div>
+    <div class="allItemsContainer">
+      <% allItems.forEach((eachItem,index) => {%>
+      <div class="eachItem">
+        <p>ItemName: <%=eachItem.itemName; %></p>
+        <a href="/homeServices/<%= eachItem._id %>">
+          <img src="<%= eachItem.img %>" />
+        </a>
+        <p>Price: <%=eachItem.price; %></p>
+        <p>Description: <%=eachItem.description; %></p>
+        <p>orderNote: <%=eachItem.orderNote; %></p>
+        <p>Location: <%=eachItem.location; %></p>
+        <p>PostedTime: <%=eachItem.time; %></p>
+      </div>
+      <% }) %>
+    </div>
   </body>
 </html>

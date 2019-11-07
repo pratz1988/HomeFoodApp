@@ -26,7 +26,7 @@ router.get("/sellItems", (req, res) => {
     if (err) {
       res.send(err);
     } else {
-      res.render("index.ejs", {
+      res.render("foodItems.ejs", {
         allItems
       });
     }
@@ -40,12 +40,47 @@ router.get('/new', (req, res) => {
   });
 
 ///////////     SHOW   ///////////////////
+router.get("/:id", (req, res) => {
+    sellItemModel.findById(req.params.id, (err, currentFoodItem) => {
+      console.log(currentFoodItem);
+      if (err) {
+        res.send(err);
+      } else {
+        res.render("show.ejs", {
+         currentFoodItem
+        });
+      }
+      // res.send("Show");
+    });
+  });
 
 ///////////     CREATE   //////////////////
+router.post("/sellItems", (req, res) => {
+    sellItemModel.create(req.body, (error, createdItem) => {
+      if (error) {
+        res.send(error);
+      } else {
+        res.redirect("/sellItems");
+      }
+    });
+  });
 
 ///////////     DELETE   //////////////////
 
 ///////////     EDIT   //////////////////
+router.get("/:id/edit", (req, res) => {
+    sellItemModel.findById(req.params.id, (err, editItem) => {
+      // console.log("buy ..." + foundProduct);
+      if (err) {
+        console.log(err);
+      } else {
+        res.render("edit.ejs", {
+            editItem: editItem,
+          index: req.params.id
+        });
+      }
+    });
+  });
 
 ///////////     PUT   //////////////////
 

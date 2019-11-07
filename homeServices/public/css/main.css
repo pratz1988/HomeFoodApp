@@ -1,1 +1,17 @@
-@import "../node_modules/bulma/css/bulma.css";
+/* @import "../node_modules/bulma/css/bulma.css"; */
+.eachItem {
+  background-color: darkkhaki;
+  display: inline-block;
+  text-align: center;
+  width: 230px;
+  height: 250px;
+  margin: 15px 10px 10px 10px;
+}
+img {
+  width: 200px;
+  height: 150px;
+}
+nav {
+  background-color: blue;
+  width: 100vw;
+}

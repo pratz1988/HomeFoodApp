@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/
+bulma.min.css" rel="stylesheet">
+<style>
+    .sellItemForm {
+        width: 60%;
+        margin-left: 100px;
+        height: 50%;
+    }
+</style>
+</head>
+<body>
+        <h1>New Item page</h1>
+     <div class="sellItemForm input" >
+        <form action="/homeSrvices/sellItems" method="POST">
+            <div class="field">
+                    <label class="label" for="itemName">ItemName: </label>
+                    <div class="control">
+                      <input class="input" type="text" placeholder="enter food item name" name="itemName" id="itemName">
+                    </div>
+            </div>
+                  
+            <div class="field">
+                <label class="label" for="price">Price: </label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="enter price" name="price" id="price">
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label" for="img">Image: </label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="upload food Image" name="img" id="img">
+                </div>
+                </div>
+                <div class="field">
+                    <label class="label" for="orderNote">OrderNote: </label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Enter Food Item Description" name="description" id="description">
+                 </div>
+                 </div>
+                 <div class="field">
+                        <label class="label" for="location">Location: </label>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="Enter your Location" name="location" id="location">
+                        </div>
+                 </div>
+                 <div class="field">
+                        <label class="label" for="time">Time: </label>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="Enter What time You Post like 9am" name="time" id="time">
+                        </div>
+                 </div>
+                  <div class="field">
+                    <label class="label">Email</label>
+                    <div class="control has-icons-left has-icons-right">
+                      <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                      </span>
+                      <span class="icon is-small is-right">
+                        <i class="fas fa-exclamation-triangle"></i>
+                      </span>
+                    </div>
+                    <p class="help is-danger">This email is invalid</p>
+                  </div>
+                    
+                  <div class="field">
+                    <label class="label">Description:</label>
+                    <div class="control">
+                      <textarea class="textarea" placeholder="Enter Food Item Description" name="description" id="description" ></textarea>
+                    </div>
+                  </div>
+            
+                  
+                  <div class="field is-grouped">
+                    <div class="control">
+                      <button class="button is-link">Submit</button>
+                    </div>
+                    <div class="control">
+                      <button class="button is-link is-light">Cancel</button>
+                    </div>
+                  </div>          
+        </form>
+    </div>
+</body>
+</html>
