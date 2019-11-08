@@ -14,6 +14,9 @@ bulma.min.css" rel="stylesheet">
         margin-left: 100px;
         height: 50%;
     }
+    .inputWidth {
+      width: 400px;
+    }
 </style>
 </head>
 <body>
@@ -23,45 +26,45 @@ bulma.min.css" rel="stylesheet">
             <div class="field">
                     <label class="label" for="itemName">ItemName: </label>
                     <div class="control">
-                      <input class="input" type="text" placeholder="enter food item name" name="itemName" id="itemName">
+                      <input class="input inputWidth" type="text" placeholder="enter food item name" name="itemName" id="itemName">
                     </div>
             </div>
                   
             <div class="field">
                 <label class="label" for="price">Price: </label>
                 <div class="control">
-                    <input class="input" type="text" placeholder="enter price" name="price" id="price">
+                    <input class="input inputWidth" type="text" placeholder="enter price" name="price" id="price">
                 </div>
             </div>
 
             <div class="field">
                 <label class="label" for="img">Image: </label>
                 <div class="control">
-                    <input class="input" type="text" placeholder="upload food Image" name="img" id="img">
+                    <input class="input inputWidth" type="text" placeholder="upload food Image" name="img" id="img">
                 </div>
                 </div>
                 <div class="field">
                     <label class="label" for="orderNote">OrderNote: </label>
                     <div class="control">
-                        <input class="input" type="text" placeholder="what time users can buy your item" name="description" id="description">
+                        <input class="input inputWidth" type="text" placeholder="what time users can buy your item" name="orderNote" id="orderNote">
                  </div>
                  </div>
                  <div class="field">
                         <label class="label" for="location">Location: </label>
                         <div class="control">
-                            <input class="input" type="text" placeholder="Enter your Location" name="location" id="location">
+                            <input class="input inputWidth" type="text" placeholder="Enter your Location" name="location" id="location">
                         </div>
                  </div>
                  <div class="field">
                         <label class="label" for="time">Time: </label>
                         <div class="control">
-                            <input class="input" type="text" placeholder="Enter What time You Post like 9am" name="time" id="time">
+                            <input class="input inputWidth" type="text" placeholder="Enter What time You Post like 9am" name="time" id="time">
                         </div>
                  </div>
-                  <div class="field">
+                  <!-- <div class="field">
                     <label class="label">Email</label>
                     <div class="control has-icons-left has-icons-right">
-                      <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+                      <input class="input is-danger" name="email" type="email" placeholder="Email input" value="hello@">
                       <span class="icon is-small is-left">
                         <i class="fas fa-envelope"></i>
                       </span>
@@ -71,9 +74,9 @@ bulma.min.css" rel="stylesheet">
                     </div>
                     <p class="help is-danger">This email is invalid</p>
                   </div>
-                    
+                     -->
                   <div class="field">
-                    <label class="label">Description:</label>
+                    <label class="label" for="description">Description:</label>
                     <div class="control">
                       <textarea class="textarea" placeholder="Enter Food Item Description" name="description" id="description" ></textarea>
                     </div>

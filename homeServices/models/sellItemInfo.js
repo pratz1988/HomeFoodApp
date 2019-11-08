@@ -5,10 +5,11 @@ const itemSchema = new mongoose.Schema(
         itemName: String,
         price: String,
         img: String,
-        description: String,
         orderNote: String,
         location: String,
-        time: String
+        time: String,
+        description: String
+        
     },
     {
         timestamps: true
