@@ -93,5 +93,19 @@ router.get("/:id/edit", (req, res) => {
   });
 
 ///////////     PUT   //////////////////
+router.put("/:id", (req, res) => {
+  sellItemModel.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    { new: true },
+    (err, updatedProduct) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.redirect("/products");
+      }
+    }
+  );
+});
 
 module.exports = router;
