@@ -4,8 +4,13 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
+const session = require("express-session");
 const methodOverride = require("method-override");
+
+// CONTROLLERS
 const homeServicesController = require("./controllers/homeServices.js");
+const usersController = require("./controllers/users.js");
+
 
 // =======================================
 //              DATABASE
@@ -26,9 +31,10 @@ app.use(express.static(__dirname + "/public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 
+
 //routes
 app.use("/homeServices", homeServicesController);
-// app.use("/users", usersController);
+app.use("/users", usersController);
 
 // =======================================
 //              PORT

@@ -54,13 +54,13 @@ router.get("/:id", (req, res) => {
     });
   });
 
-///////////     CREATE   //////////////////
+///////////     CREATE (POST)  //////////////////
 router.post("/sellItems", (req, res) => {
     sellItemModel.create(req.body, (error, createdItem) => {
       if (error) {
         res.send(error);
       } else {
-        res.redirect("/sellItems");
+        res.redirect("homeServices/sellItems");
       }
     });
   });
