@@ -7,15 +7,19 @@ const mongoose = require("mongoose");
 const session = require("express-session");
 const methodOverride = require("method-override");
 
+///PORT
+const PORT = process.env.PORT || 3000;
+
 // CONTROLLERS
 const homeServicesController = require("./controllers/homeServices.js");
 const usersController = require("./controllers/users.js");
 
-
 // =======================================
 //              DATABASE
 // =======================================
-mongoose.connect("mongodb://localhost:27017/homeFood", {
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/DB_NAME'
+
+mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true
 });
 mongoose.connection.once("open", () => {
@@ -39,7 +43,7 @@ app.use("/users", usersController);
 // =======================================
 //              PORT
 // =======================================
-app.listen(3000, (req, res) => {
+app.listen(PORT, (req, res) => {
   console.log("listening on  PORT 3000!");
 });
 

@@ -55,20 +55,18 @@ const seedFoodItemInfo = [
 // Seeding function
 const seedDB = () => {
   // Declare db name, URI, and instantiate connection
-  const dbName = 'homeFood'
-  const dbURI = `mongodb://localhost:27017/${dbName}`;
-  const dbConnection = mongoose.connection;
-
-  dbConnection.on('error', (err) => console.log('DB Connection Error: ', err));
-  dbConnection.on('connected', () => console.log('DB Connected to: ', dbURI));
-  dbConnection.on('disconnected', () => console.log('DB Disconnected'));
-  
-  mongoose.connect(
-    dbURI,
-    { useNewUrlParser: true },
-    () => console.log(`${dbName} db running on ${dbURI}`)
-  );
-  
+  // =======================================
+    //              DATABASE
+    // =======================================
+    const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/DB_NAME'
+    
+    mongoose.connect(MONGODB_URI, {
+      useNewUrlParser: true
+    });
+    mongoose.connection.once("open", () => {
+      console.log("connected to mongo");
+    });
+    
 //Delete database collection seed data
 sellItemModel.collection.drop();
 
