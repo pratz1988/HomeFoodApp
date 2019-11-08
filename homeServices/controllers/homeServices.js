@@ -60,12 +60,22 @@ router.post("/sellItems", (req, res) => {
       if (error) {
         res.send(error);
       } else {
+        console.log(req.body)
         res.redirect("homeServices/sellItems");
       }
     });
   });
 
 ///////////     DELETE   //////////////////
+router.delete("/:id", (req, res) => {
+  sellItemModel.findByIdAndRemove(req.params.id, (err, deletedFoodItem) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.redirect("/homeServices/sellItems");
+    }
+  });
+});
 
 ///////////     EDIT   //////////////////
 router.get("/:id/edit", (req, res) => {

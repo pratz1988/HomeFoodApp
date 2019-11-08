@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/
+    bulma.min.css" rel="stylesheet">
+    <style>
+      .eachItem {
+        background-color: darkkhaki;
+        display: inline-block;
+        text-align: center;
+        width: 250px;
+        height: 250px;
+        margin: 15px 10px 10px 10px;
+      }
+      img {
+        width: 200px;
+        height: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <h1>User  Details</h1>
+    </div>
+    <div class="allItemsContainer">
+      <% allUsers.forEach((eachUser,index) => {%>
+      <div class="eachItem">
+            <h3>Name: <%= eachUser.name %></h3>
+        <p>Email: <%= eachUser.email%></p>
+        <p>Password: <%= eachUser.password%></p>
+        <p>PhoneNo: <%= eachUser.phoneNo%></p>
+        <p>Location: <%= eachUser.location%></p>
+      </div>
+      <% }) %>
+    </div>
+  </body>
+</html>
+
