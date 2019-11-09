@@ -5,24 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/
-    bulma.min.css" rel="stylesheet">
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/
+bulma.min.css"
+    rel="stylesheet"
+  />
+
     <style>
       .eachItem {
         background-color: darkkhaki;
         display: inline-block;
+       
         text-align: center;
-        width: 230px;
-        height: 450px;
-        margin: 15px 10px 10px 10px;
+        width: 300px;
+        height: 300px;
+        margin: 15px;
       }
       img {
         width: 200px;
         height: 150px;
       }
+      .allItemsContainer {
+        /* display: flex; */
+        outline: 1px solid red;
+        width: 80%;
+        margin: 0 auto;
+      }
+      .navClass {
+        display: flex;
+      }
+      h1 {
+        text-align: center;
+      }
     </style>
   </head>
   <body>
+
+    <!--        NAV BAR    -->
+      <div class="navClass has-navbar-fixed-top"> 
+          <div>
+            <a class="navbar-item" href="#">
+              Home
+            </a>    
+          </div>
+          
+          <div >
+              <a class="navbar-item"  href="#"> 
+                How It Works
+              </a>  
+          </div>
+      
+          <div >
+            <a class="navbar-item" href="/homeServices/new">
+              SellFood
+            </a>     
+          </div>
+      
+          <div >
+            <a class="navbar-item" href="/homeServices/sellItems">
+              BuyFood
+              </a>     
+          </div>
+          <div class="navbar-item right"> 
+              <div class="buttons">
+                <a class="button is-primary" href="/users/signUp">
+                  <strong>Sign up</strong>
+                </a>
+                <a class="button is-light" href="/users/login">
+                  Log in
+                </a>
+             
+             </div>
+          </div> 
+</div>
+  <!-- ----------   FOODD ITEMS LIST ------------->
+
     <div id="header">
       <h1>HOME FOOD</h1>
     </div>
@@ -38,6 +95,9 @@
         <p>orderNote: <%=eachItem.orderNote; %></p>
         <p>Location: <%=eachItem.location; %></p>
         <p>PostedTime: <%=eachItem.time; %></p>
+        <form action="/homeServices/<%=eachItem._id; %>?_method=DELETE" method="POST">
+          <input type="submit" value="DELETE" />
+        </form>
       </div>
       <% }) %>
     </div>

@@ -21,23 +21,39 @@ router.get("/", (req, res) => {
     });
   }); 
 
-router.get("/sellItems", (req, res) => {
-  sellItemModel.find({}, (err, allItems) => {
-    if (err) {
-      res.send(err);
-    } else {
-      res.render("foodItems.ejs", {
-        allItems
-      });
-    }
+  /////// Route to get FoodItems ///
+  router.get("/sellItems", (req, res) => {
+    sellItemModel.find({}, (err, allItems) => {
+      if (err) {
+        res.send(err);
+      } else {
+        res.render("foodItems.ejs", {
+          allItems
+        });
+      }
+    });
   });
-});
+  
 
 ///////////     NEW   ///////////////////
 // NEW (CLIENT)
 router.get('/new', (req, res) => {
     res.render('new.ejs');
   });
+
+///////////     CREATE (POST)  //////////////////
+router.post("/foodItems", (req, res) => {
+  sellItemModel.create(req.body, (error, createdItem) => {
+    if (error) {
+      res.send(error);
+    } else {
+      console.log(req.body)
+      res.redirect("/homeServices/sellItems");
+    }
+  });
+});
+
+
 
 ///////////     SHOW   ///////////////////
 router.get("/:id", (req, res) => {
@@ -54,17 +70,7 @@ router.get("/:id", (req, res) => {
     });
   });
 
-///////////     CREATE (POST)  //////////////////
-router.post("/sellItems", (req, res) => {
-    sellItemModel.create(req.body, (error, createdItem) => {
-      if (error) {
-        res.send(error);
-      } else {
-        console.log(req.body)
-        res.redirect("homeServices/sellItems");
-      }
-    });
-  });
+
 
 ///////////     DELETE   //////////////////
 router.delete("/:id", (req, res) => {
@@ -98,11 +104,11 @@ router.put("/:id", (req, res) => {
     req.params.id,
     req.body,
     { new: true },
-    (err, updatedProduct) => {
+    (err, updatedItem) => {
       if (err) {
         console.log(err);
       } else {
-        res.redirect("/products");
+        res.redirect("/homeServices/sellItems");
       }
     }
   );
