@@ -2,14 +2,15 @@ const mongoose = require("mongoose");
 
 const itemSchema = new mongoose.Schema(
     {
+        userName: String,
+        email: String,
         itemName: String,
         price: String,
         img: String,
         orderNote: String,
         location: String,
         time: String,
-        description: String
-        
+        description: String     
     },
     {
         timestamps: true

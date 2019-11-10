@@ -23,6 +23,12 @@ bulma.min.css" rel="stylesheet">
         <h1>New Item page</h1>
      <div class="sellItemForm input" >
         <form action="/homeServices/foodItems" method="POST">
+          <div class="field">
+              <label class="label" for="userName">UserName: </label>
+              <div class="control">
+                <input class="input inputWidth" type="text" placeholder="enter food item name" name="userName" id="userName">
+              </div>
+      </div>
             <div class="field">
                     <label class="label" for="itemName">ItemName: </label>
                     <div class="control">
@@ -61,7 +67,7 @@ bulma.min.css" rel="stylesheet">
                             <input class="input inputWidth" type="text" placeholder="Enter What time You Post like 9am" name="time" id="time">
                         </div>
                  </div>
-                  <!-- <div class="field">
+                  <div class="field">
                     <label class="label">Email</label>
                     <div class="control has-icons-left has-icons-right">
                       <input class="input is-danger" name="email" type="email" placeholder="Email input" value="hello@">
@@ -74,7 +80,7 @@ bulma.min.css" rel="stylesheet">
                     </div>
                     <p class="help is-danger">This email is invalid</p>
                   </div>
-                     -->
+                    
                   <div class="field">
                     <label class="label" for="description">Description:</label>
                     <div class="control">

@@ -10,7 +10,9 @@
 bulma.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/main.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/4.7.0/css/font-awesome.min.css"> -->
+    <script src="https://kit.fontawesome.com/79a1b0e7d3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/main.css" /> 
   </head>
 
   <style>
@@ -23,13 +25,18 @@ bulma.min.css"
       .right {
         text-align: right;
       }
+      .videoClass {
+        width: 100%;
+        height: 300px;
+      }
   </style>
   
   
   <body>
   <div class="navClass"> 
     <div>
-      <a class="navbar-item" href="#">
+      <a class="navbar-item" href="/homeServices">
+       <p> <i class="fas fa-home"></i></p>
         Home
       </a>    
     </div>
@@ -87,9 +94,17 @@ bulma.min.css"
          
          </div>
       </div> 
- 
-  
+    </div>
+  <header>
+      
+      <video controls>
+       
+          <source src="/video/video.mp4" type="video/mp4" class="videoClass">
+          <!-- <source src="movie.ogg" type="video/ogg"> -->
+       
+        </video>
+  </header>
 
-  </div>
+ 
   </body>
 </html>

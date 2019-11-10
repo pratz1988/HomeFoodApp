@@ -5,11 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/
 bulma.min.css" rel="stylesheet">
-
+<style>
+    .sellItemForm {
+        width: 60%;
+        margin-left: 100px;
+        height: 50%;
+    }
+    .inputWidth {
+      width: 400px;
+    }
+</style>
 </head>
 <body>
-        
+        <h1>New Item page</h1>
+     <div class="sellItemForm input" >
+        <form action="/homeServices/<%=index%>?_method=PUT" method="POST">
+          <div class="field">
+              <label class="label" for="userName">UserName: </label>
+              <div class="control">
+                <input class="input inputWidth" type="text" placeholder="enter food item name" name="userName" id="userName" value="<%= editItem.userName %>"/>
+              </div>
+      </div>
+            <div class="field">
+                    <label class="label" for="itemName">ItemName: </label>
+                    <div class="control">
+                      <input class="input inputWidth" type="text" placeholder="enter food item name" name="itemName" id="itemName" value="<%= editItem.itemName %>">
+                    </div>
+            </div>
+                  
+            <div class="field">
+                <label class="label" for="price">Price: </label>
+                <div class="control">
+                    <input class="input inputWidth" type="text" placeholder="enter price" name="price" id="price" value="<%= editItem.price %>">
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label" for="img">Image: </label>
+                <div class="control">
+                    <input class="input inputWidth" type="text" placeholder="upload food Image" name="img" id="img" value="<%= editItem.img %>">
+                </div>
+                </div>
+                <div class="field">
+                    <label class="label" for="orderNote">OrderNote: </label>
+                    <div class="control">
+                        <input class="input inputWidth" type="text" placeholder="what time users can buy your item" name="orderNote" id="orderNote" value="<%= editItem.orderNote %>">
+                 </div>
+                 </div>
+                 <div class="field">
+                        <label class="label" for="location">Location: </label>
+                        <div class="control">
+                            <input class="input inputWidth" type="text" placeholder="Enter your Location" name="location" id="location" value="<%= editItem.location %>">
+                        </div>
+                 </div>
+                 <div class="field">
+                        <label class="label" for="time">Time: </label>
+                        <div class="control">
+                            <input class="input inputWidth" type="text" placeholder="Enter What time You Post like 9am" name="time" id="time" value="<%= editItem.time %>">
+                        </div>
+                 </div>
+                  <div class="field">
+                    <label class="label">Email</label>
+                    <div class="control has-icons-left has-icons-right">
+                      <input class="input is-danger" name="email" type="email" placeholder="Email input" value="<%= editItem.email %>">
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                      </span>
+                      <span class="icon is-small is-right">
+                        <i class="fas fa-exclamation-triangle"></i>
+                      </span>
+                    </div>
+                    <p class="help is-danger">This email is invalid</p>
+                  </div>
+                    
+                  <div class="field">
+                    <label class="label" for="description">Description:</label>
+                    <div class="control">
+                      <textarea class="textarea" placeholder="Enter Food Item Description" name="description" id="description" value="<%= editItem.description %>"></textarea>
+                    </div>
+                  </div>
+            
+                  
+                  <div class="field is-grouped">
+                    <div class="control">
+                      <button class="button is-link">Update</button>
+                    </div>
+                    <div class="control">
+                      <button class="button is-link is-light">Cancel</button>
+                    </div>
+                  </div>          
+        </form>
+    </div>
 </body>
 </html>

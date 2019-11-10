@@ -3,6 +3,8 @@ const sellItemModel = require("./sellItemInfo");
 
 const seedFoodItemInfo = [
   {
+    userName: "Pratz",
+    email: "pratzJ@gmail.com",
     itemName: "Samosa",
     price: "$6",
     img: "http://mychutni.com/wp-content/uploads/2017/12/maxresdefault.jpg",
@@ -12,6 +14,8 @@ const seedFoodItemInfo = [
     time: "9am"
   },
   {
+    userName: "Deepthi",
+    email: "deepthi@gmail.com",
     itemName: "Gulab Jamun",
     price: "$8",
     img: "https://5.imimg.com/data5/VO/NJ/GLADMIN-5940560/gulab-jamun-500x500.jpg",
@@ -21,6 +25,8 @@ const seedFoodItemInfo = [
     time: "10am"
   },
   {
+    userName: "Swetha",
+    email: "swetha@gmail.com",
     itemName: "Chicken Biryani",
     price: "$13",
     img: "https://wallpapercave.com/wp/wp3053381.jpg",
@@ -30,6 +36,8 @@ const seedFoodItemInfo = [
     time: "11am"
 },
   {
+    userName: "Lavanya",
+    email: "lavanya@gmail.com",
     itemName: "Lamb Curry",
     price: "$11",
     img: "http://www.ndtv.com/cooks/images/iStock.608005280.jpg",
@@ -40,6 +48,8 @@ const seedFoodItemInfo = [
   },
 
   {
+    userName: "Abi",
+    email: "abi@gmail.com",
     itemName: "Bhindi Masala",
     price: "$10",
     img: "http://mychutni.com/wp-content/uploads/2018/10/bhindi-masala.jpg",
@@ -47,6 +57,17 @@ const seedFoodItemInfo = [
     orderNote: "Please order this item for your lunch today",
     location: "Stamford",
     time: "10am"
+  },
+  {
+    userName: "Shilpa",
+    email: "shilpa@gmail.com",
+    itemName: "Dosa",
+    price: "$8",
+    img: "https://images.pexels.com/photos/221143/pexels-photo-221143.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500.png",
+    description: "Dish made with urad dal, onion, tomatoes & spices",
+    orderNote: "Please order for breakfast",
+    location: "Stamford",
+    time: "8am"
   }
   
 ];
