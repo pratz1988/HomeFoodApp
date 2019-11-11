@@ -66,8 +66,8 @@ bulma.min.css"
         /* outline: 1px solid red; */
       }
       .otherServicesDiv {
-        margin-left: 100px;
-       
+        margin-left: 70px;
+        /* outline: 1px solid red; */
       }
       h2 {
         color: darkgreen;
@@ -91,6 +91,8 @@ bulma.min.css"
   
   
   <body>
+
+    <!---------- NAV BAR  --------------->
       <nav class="navbar  is-fixed-top" role="navigation" aria-label="main navigation">
           <div class="navbar-brand">
            
@@ -164,7 +166,7 @@ bulma.min.css"
         <div class="navbar-end">
             <div class="navbar-item">
               <div class="buttons">
-                <a class="button is-primary" href="/users/signUp">
+                <a class="button is-success" href="/users/signUp">
                   <strong>Sign up</strong>
                 </a>
                 <a class="button is-light" href="/users/login">
@@ -196,22 +198,55 @@ bulma.min.css"
   </div>
 </div>
 
+<!------- Other Services ------->
   <div class="columns otherServices">
+        <div class="column otherServicesDiv">
+              <h2> HOMEFOOD </h2>
+              <p class="otherServicesP">It provides a market place for HomeFood, Maid Service and Nanny's.Any one can buy food & Sell food using this App.
+                  Any one register and offer thier services like maid & nanny.</p>
+              <div class="buttons">        
+                  <a  href="/homeServices/sellItems"> <button class="button is-success">FoodMenu</button></a>
+              </div>
+        </div>
+        <div class="column">
+            <img src="/images/foodImg.jpg" width="400" height="200" class="homeFoodImg">
+        </div>
+   
+  </div>
+  
+
+  <div class="columns otherServices">
+
       <div class="column otherServicesDiv">
-        <h2> HOMEFOOD </h2>
-        <p class="otherServicesP">It provides a market place for HomeFood, Maid Service and Nanny's.Any one can buy food & Sell food using this App.
-            Any one register and offer thier services like maid & nanny.</p>
-        <div class="buttons">        
-            <a  href="/homeServices/sellItems"> <button class="button is-success">FoodMenu</button></a>
+          <img src="/images/maidservice.jpg" width="400" height="200" class="homeFoodImg">
+         </div>
+  
+      <div class="column">
+          <h2> MAID SERVICE </h2>
+          <p class="otherServicesP">It provides a market place for HomeFood, Maid Service and Nanny's.Any one can buy food & Sell food using this App.
+              Any one register and offer thier services like maid & nanny.</p>
+          <div class="buttons">        
+              <a  href="#"> <button class="button is-success">MaidService</button></a>
           </div>
       </div>
-      <div class="column">
-       <img src="/images/foodImg.jpg" width="400" height="200" class="homeFoodImg">
+ 
+  </div> 
+
+  <div class="columns otherServices">
+      <div class="column otherServicesDiv">
+            <h2> CHILDCARE </h2>
+            <p class="otherServicesP">It provides a market place for HomeFood, Maid Service and Nanny's.Any one can buy food & Sell food using this App.
+                Any one register and offer thier services like maid & nanny.</p>
+            <div class="buttons">        
+                <a  href="#"> <button class="button is-success">ChildCare</button></a>
+            </div>
       </div>
-   </div> 
+      <div class="column">
+          <img src="/images/childcare.jpg" width="400" height="200" class="homeFoodImg">
+      </div>
+ 
+</div>
   
-    </div>
-  </div>
 
   <!-------------- FOOTER ---------- -->
   <footer class="footer">
