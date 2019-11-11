@@ -19,14 +19,17 @@ router.get("/signUp", (req, res) => {
 //CREATE(POST)
 router.post("/check", (req, res) => {
   userModel.findOne({ email: req.body.email }, (err, foundUser) => {
-    if (err) {
-      console.log("Login error: ", err);
-      res.send('SignUp');
-    } else {
-      if (req.body.password === foundUser.password) {
-        console.log(req.body.email);
-        res.redirect("/homeServices/sellItems");
+      if(err) throw err;
+      if (foundUser && foundUser._id){
+        if(req.body.password === foundUser.password) {
+          console.log(req.body.email);
+          res.redirect("/homeServices/sellItems");
+      } else {
+        res.send("Wrong Password");
       }
+    }
+    else {
+      res.send("Invalid Login, Please signUp");
     }
   });
 });

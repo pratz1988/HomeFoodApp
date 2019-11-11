@@ -10,8 +10,7 @@
 bulma.min.css"
       rel="stylesheet"
     />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/4.7.0/css/font-awesome.min.css"> -->
-    <script src="https://kit.fontawesome.com/79a1b0e7d3.js" crossorigin="anonymous"></script>
+   
     <link rel="stylesheet" href="/css/main.css" /> 
   </head>
 
@@ -21,40 +20,82 @@ bulma.min.css"
       } */
       .navClass {
         display: flex;
+        outline: 1px solid white;
+        z-index: 1;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: transparent;
       }
       .right {
         text-align: right;
       }
       .videoClass {
         width: 100%;
-        height: 300px;
+        height: 500px;
+        outline: 2px solid white;
+        overflow: scroll;
+        margin: 0 auto;
       }
+      .video1{
+         width: vw;
+        height: 430px;
+        
+      }
+      .marketplace1 {
+       
+        width: 600px;
+        /* outline: 1px solid red; */
+        margin: 50px 100px 20px 250px;
+      }
+    
+      h1 {
+        text-align: center;
+        color: darkgreen;
+        font-weight: 600;
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+      .marketplaceP{
+        text-align: start;
+        width: 400px;
+        margin-left: 120px;
+      }
+      
   </style>
   
   
   <body>
-  <div class="navClass"> 
-    <div>
-      <a class="navbar-item" href="/homeServices">
-       <p> <i class="fas fa-home"></i></p>
-        Home
-      </a>    
-    </div>
+    <div class="navClass has-text-success "> 
+      <div>
+        <a class="navbar-item" href="/homeServices">
+        <p> <i class="fas fa-home"></i></p>
+          Home
+        </a>    
+      </div>
     
     <div >
-        <a class="navbar-item"  href="#"> 
+        <a class="navbar-item"  href="/homeServices/howItWorks"> 
+          <p><i class="fas fa-network-wired"></i></p>
+         
           How It Works
         </a>  
     </div>
-
+    <div >
+        <a class="navbar-item"  href="/homeServices/sellItems"> 
+          <p><i class="fas fa-book-open"></i></p>    
+          Menu
+        </a>  
+    </div>
     <div >
       <a class="navbar-item" href="/homeServices/new">
-        SellFood
+        <div><i class="fas fa-hamburger"></i></div>
+        <div>SellFood</div>
       </a>     
     </div>
 
     <div >
       <a class="navbar-item" href="/homeServices/sellItems">
+        <p><i class="fas fa-pizza-slice"></i></p> 
         BuyFood
         </a>     
     </div>
@@ -81,30 +122,58 @@ bulma.min.css"
               </div>
             </div>
           </div>
-       -->
+        -->
+    <div class="navbar-item right"> 
+      <div class="buttons">
+        <a class="button is-primary" href="/users/signUp">
+          <strong>Sign up</strong>
+        </a>
+        <a class="button is-light" href="/users/login">
+          Log in
+        </a>    
+      </div>
+  </div> 
+</div>
 
-        <div class="navbar-item right"> 
-          <div class="buttons">
-            <a class="button is-primary" href="/users/signUp">
-              <strong>Sign up</strong>
-            </a>
-            <a class="button is-light" href="/users/login">
-              Log in
-            </a>
-         
-         </div>
-      </div> 
-    </div>
-  <header>
+  <header class="videoClass">
+    <div class="video1">
       
-      <video controls>
-       
-          <source src="/video/video.mp4" type="video/mp4" class="videoClass">
-          <!-- <source src="movie.ogg" type="video/ogg"> -->
-       
+      <video  controls autoplay loop >     
+          <source src="/video/video.mp4" type="video/mp4">
+          <!-- <source src="movie.ogg" type="video/ogg"> --> 
         </video>
+      </div>
   </header>
 
- 
+<!------------------ main content --------------------->
+  <div class="marketplace1">
+    <div class="marketplace2">
+    <h1> About HomeServices App</h1>
+    <p class="marketplaceP">It provides a market place for HomeFood, Maid Service and Nanny's.Any one can buy food & Sell food using this App.
+        Any one register and offer thier services like maid & nanny.
+    </p>
+  </div>
+</div>
+
+  <div class="columns">
+      <div class="column">
+        First column
+      </div>
+      <div class="column">
+        Second column
+      </div>
+   </div> 
+   <div class="columns">
+      <div class="column">
+        Third column
+        <div>4th col</div>
+      </div>
+      <div class="column">
+        Fourth column
+      </div>
+    </div>
+  </div>
+    <!---------- Font Awesome ---------->
+  <script src="https://kit.fontawesome.com/79a1b0e7d3.js" crossorigin="anonymous"></script>
   </body>
 </html>

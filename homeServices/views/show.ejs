@@ -25,7 +25,7 @@
   <body>     
         <div>
         <h1><%= currentFoodItem.itemName %></h1>
-        <p>PRICE: <%= currentFoodItem.price%></p>
+        <p>Price: <%= currentFoodItem.price%></p>
         <p>PostedTime: <%= currentFoodItem.time%></p>
         <p>OrderNote: <%= currentFoodItem.orderNote%></p>
         <p>Location: <%= currentFoodItem.location%></p>
@@ -33,6 +33,7 @@
         <p>Description<%= currentFoodItem.description %></p>   
         <p>UserName: <%= currentFoodItem.userName%></p>
         <p>Email: <%= currentFoodItem.email%></p>
+        <a href="/homeServices/placeOrder"><button>Place Order</button></a>
         </div>
   </body>
 </html>

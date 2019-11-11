@@ -21,7 +21,7 @@ router.get("/", (req, res) => {
     });
   }); 
 
-  /////// Route to get FoodItems ///
+  /////// Route to get FoodItems //////
   router.get("/sellItems", (req, res) => {
     sellItemModel.find({}, (err, allItems) => {
       if (err) {
@@ -33,7 +33,16 @@ router.get("/", (req, res) => {
       }
     });
   });
+
+  /////// Route to HowItWorks //////////
+  router.get("/howItWorks", (req, res) => { 
+        res.render("howItWorks.ejs");
+  });
   
+   /////// Route to HowItWorks //////////
+   router.get("/placeorder", (req, res) => { 
+    res.render("placeOrder.ejs");
+});
 
 ///////////     NEW   ///////////////////
 // NEW (CLIENT)
@@ -82,6 +91,7 @@ router.delete("/:id", (req, res) => {
     }
   });
 });
+
 
 ///////////     EDIT   //////////////////
 router.get("/:id/edit", (req, res) => {
