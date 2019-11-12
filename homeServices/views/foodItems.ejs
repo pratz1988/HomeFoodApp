@@ -13,97 +13,167 @@ bulma.min.css"
 
     <style>
       .eachItem {
-        background-color: darkkhaki;
-        display: inline-block;
-       
-        text-align: center;
-        width: 300px;
+        width: 350px;
         height: 300px;
         margin: 15px;
       }
       img {
-        width: 200px;
-        height: 150px;
+        width: 280px;
+        height: 200px;
       }
       .allItemsContainer {
-        /* display: flex; */
-        outline: 1px solid red;
+       
+        /* outline: 1px solid red; */
         width: 80%;
         margin: 0 auto;
+        overflow: scroll;
       }
-      .navClass {
-        display: flex;
-      }
+      
       h1 {
+        margin-top: 80px;
         text-align: center;
+        font-weight: 700;
+        color:forestgreen;
+        font-size: 25px;
+        margin-bottom: 10px;
       }
+      .headerOutline {
+        outline: 1px solid gainsboro;
+        height: 65px;
+      }
+      .footerHeight {
+          height: 200px;
+      }
+      
     </style>
   </head>
+
   <body>
 
-    <!--        NAV BAR    -->
-      <div class="navClass has-navbar-fixed-top"> 
-          <div>
-            <a class="navbar-item" href="/homeServices">
-              Home
-            </a>    
-          </div>
-          
-          <div >
-              <a class="navbar-item"  href="#"> 
-                How It Works
-              </a>  
-          </div>
-      
-          <div >
-            <a class="navbar-item" href="/homeServices/new">
-              SellFood
-            </a>     
-          </div>
-      
-          <div >
-            <a class="navbar-item" href="/homeServices/sellItems">
-              BuyFood
-              </a>     
-          </div>
-          <div class="navbar-item right"> 
-              <div class="buttons">
-                <a class="button is-primary" href="/users/signUp">
-                  <strong>Sign up</strong>
-                </a>
-                <a class="button is-light" href="/users/login">
-                  Log in
-                </a>
-             
-             </div>
-          </div> 
-</div>
+     
+ <!---------- NAV BAR  --------------->
+
+<nav class="navbar  is-fixed-top headerOutline" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">      
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+    <a class="navbar-item" href="/homeServices"><br>
+    <p> <i class="fas fa-home"></i></p>
+      Home
+    </a>       
+    <a class="navbar-item"  href="/homeServices/howItWorks"> 
+      <p><i class="fas fa-network-wired"></i></p>   
+      How It Works
+    </a>     
+    <a class="navbar-item"  href="/homeServices/sellItems"> 
+      <p><i class="fas fa-book-open"></i></p>    
+      Menu
+    </a>   
+    <a class="navbar-item" href="/homeServices/new">
+    <div><i class="fas fa-hamburger"></i></div>
+    <div>SellFood</div>
+    </a>     
+  <a class="navbar-item" href="/homeServices/sellItems">
+    <p><i class="fas fa-pizza-slice"></i></p> 
+    BuyFood
+    </a>     
+<div class="navbar-item has-dropdown is-hoverable">
+    <a class="navbar-link">
+      Other Services
+    </a>
+    <div class="navbar-dropdown">
+        <a class="navbar-item">
+          About Us
+        </a>
+        <a class="navbar-item">
+          Maid Services
+        </a>
+        <a class="navbar-item">
+         Child Care
+        </a>
+        <hr class="navbar-divider" />
+        <a class="navbar-item">
+          Report an issue
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+         
+          <a class="button is-light" href="/homeServices">
+            LogOut
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
   <!-- ----------   FOODD ITEMS LIST ------------->
 
-    <div id="header">
-      <h1>HOME FOOD</h1>
+  <div>
+      <h1>Pick Your Meals</h1>
     </div>
+    
     <div class="allItemsContainer">
+       
+        <% let i = 1; %>
       <% allItems.forEach((eachItem,index) => {%>
-      <div class="eachItem">
-        <p>ItemName: <%=eachItem.itemName; %></p>
-        <a href="/homeServices/<%= eachItem._id %>">
-          <img src="<%= eachItem.img %>" />
-        </a>
-        <p>Price: <%=eachItem.price; %></p>
-        <p>Description: <%=eachItem.description; %></p>
-        <p>orderNote: <%=eachItem.orderNote; %></p>
-        <p>Location: <%=eachItem.location; %></p>
-        <p>PostedTime: <%=eachItem.time; %></p>
-        <p>UserName: <%=eachItem.userName; %></p>
-        <p>Email: <%=eachItem.email; %></p>
-        <a href="/homeServices/<%=eachItem._id; %>/edit"><button>EDIT</button></a>
-        <form action="/homeServices/<%=eachItem._id; %>?_method=DELETE" method="POST">
-          <input type="submit" value="DELETE" />
-        </form>
-        <a href="/homeServices/<%=eachItem._id%>"><button>BUY</button></a>
-      </div>
-      <% }) %>
+        <%  if(index %3 === 0) { i=1 ;%>
+        <div class="columns">
+          <% } %>
+          <div class="column eachItem input">
+            
+            <a href="/homeServices/<%= eachItem._id %>">
+              <img src="<%= eachItem.img %>" />
+            </a>
+            <p>ItemName: <%=eachItem.itemName; %></p>
+            <p>Price: <%=eachItem.price; %></p>
+           
+            <a href="/homeServices/<%=eachItem._id; %>/edit"><button>EDIT</button></a>
+            <form action="/homeServices/<%=eachItem._id; %>?_method=DELETE" method="POST">
+              <input type="submit" value="DELETE" />
+            </form>
+            <a href="/homeServices/<%=eachItem._id%>"><button>BUY</button></a>
+          </div>
+          <% if(i %3 === 0) { %>
+               </div>
+          <% } i++;%>
+               
+          <% }) %>
     </div>
+
+ <!-------------- FOOTER ---------- -->
+<footer class="footer footerHeight">
+    <div class="content has-text-centered">
+        <div class="columns">
+            <div class="column">
+                <p>
+                  <strong>HomeServices App </strong> by <a href="#">Pratz</a> All rights reserved 2019. 
+                </p>
+              </div>
+              <div class="column">
+              <p>Contact Us</p>
+              <p> Privacy Policy</p>
+              <p>Trems and Conditions</p>
+              <p>999-999-8888</p>
+            
+            </div>
+        </div>
+    </div>
+  </footer>
+
+  
+  <!---------- Font Awesome ---------->
+<script src="https://kit.fontawesome.com/79a1b0e7d3.js" crossorigin="anonymous"></script>
   </body>
 </html>

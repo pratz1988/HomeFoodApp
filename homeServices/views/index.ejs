@@ -18,14 +18,13 @@ bulma.min.css"
       /* .navWidth {
         display: inline-block;
       } */
-      .navClass {
-        display: flex;
-        outline: 1px solid white;
+      /* .navClass {
+        
         z-index: 1;
         margin-top: 10px;
         margin-bottom: 10px;
-        background-color: transparent;
-      }
+        
+      } */
       .right {
         text-align: right;
       }
@@ -35,8 +34,11 @@ bulma.min.css"
         outline: 2px solid white;
         overflow: scroll;
         margin: 0 auto;
+
+       /* position: relative; */
       }
       .video1{
+        margin-top: 10px;
          width: vw;
         height: 430px;
         
@@ -87,63 +89,50 @@ bulma.min.css"
       footer {
         margin-top: 50px;
       }
+      .headerOutline {
+        outline: 1px solid gainsboro;
+        height: 65px;
+      }
   </style>
   
   
   <body>
 
     <!---------- NAV BAR  --------------->
-      <nav class="navbar  is-fixed-top" role="navigation" aria-label="main navigation">
-          <div class="navbar-brand">
-           
-        
+    <nav class="navbar navClass is-fixed-top headerOutline" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand">      
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
             </a>
           </div>
-
-
-      <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-        <a class="navbar-item" href="/homeServices"><br>
-        <p> <i class="fas fa-home"></i></p>
-          Home
-        </a>    
-      
-    
-    
-        <a class="navbar-item"  href="/homeServices/howItWorks"> 
-          <p><i class="fas fa-network-wired"></i></p>
-         
-          How It Works
-        </a>  
-    
-    
-        <a class="navbar-item"  href="/homeServices/sellItems"> 
-          <p><i class="fas fa-book-open"></i></p>    
-          Menu
-        </a>  
-    
-    
-      <a class="navbar-item" href="/homeServices/new">
-        <div><i class="fas fa-hamburger"></i></div>
-        <div>SellFood</div>
-      </a>     
-    
-
-   
-      <a class="navbar-item" href="/homeServices/sellItems">
-        <p><i class="fas fa-pizza-slice"></i></p> 
-        BuyFood
-        </a>     
-  
-
-    <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          Other Services
-        </a>
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+          <a class="navbar-item" href="/homeServices"><br>
+          <p> <i class="fas fa-home"></i></p>
+            Home
+          </a>       
+          <a class="navbar-item"  href="/homeServices/howItWorks"> 
+            <p><i class="fas fa-network-wired"></i></p>   
+            How It Works
+          </a>     
+          <a class="navbar-item"  href="/homeServices/sellItems"> 
+            <p><i class="fas fa-book-open"></i></p>    
+            Menu
+          </a>   
+          <a class="navbar-item" href="/homeServices/new">
+          <div><i class="fas fa-hamburger"></i></div>
+          <div>SellFood</div>
+          </a>     
+        <a class="navbar-item" href="/homeServices/sellItems">
+          <p><i class="fas fa-pizza-slice"></i></p> 
+          BuyFood
+          </a>     
+      <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Other Services
+          </a>
 
         <div class="navbar-dropdown">
           <a class="navbar-item">
@@ -163,20 +152,20 @@ bulma.min.css"
       </div>
     </div>
 
-        <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons">
-                <a class="button is-success" href="/users/signUp">
-                  <strong>Sign up</strong>
-                </a>
-                <a class="button is-light" href="/users/login">
-                  Log in
-                </a>
-              </div>
-            </div>
+    <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-success" href="/users/signUp">
+              <strong>Sign up</strong>
+            </a>
+            <a class="button is-light" href="/users/login">
+              Log in
+            </a>
           </div>
         </div>
-      </nav>
+      </div>
+    </div>
+  </nav>
 <!------------- Video ----------->
   <header class="videoClass">
     <div class="video1">
