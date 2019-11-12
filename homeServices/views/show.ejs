@@ -11,23 +11,24 @@ bulma.min.css"
     rel="stylesheet"
   />
     <style>
-      .headerOutline {
-        outline: 1px solid gainsboro;
-        height: 60px;
-      }
+     
       .eachItem {
-        margin-left: 100px;
-        width: 80%;
+        margin-left: 220px;
+        width: 60%;
         height: vh;    
         margin-top: 100px;
         margin-bottom: 50px;
         overflow: scroll;
-        outline: 1px solid red;
+        font-size: 15px;
+        /* outline: 1px solid red; */
       }
       img {
-        width: 200px;
-        height: 150px;
+        width: 500px;
+        height: 300px;
       }
+      /* .pImg {
+        margin-left: 50px;
+      } */
 
       .footerHeight {
           height: 200px;
@@ -36,16 +37,29 @@ bulma.min.css"
       h1 {
         font-weight: 500px;
         font-size: 20px;
-        color:limegreen;
+        color: forestgreen;
         text-align: left;
         text-transform: uppercase;
         margin-bottom: 5px;
       }
       .des {
         border-bottom: 2px solid black;
+        margin-top: 5px;
         width: 100px;
+        margin-bottom: 10px;
+      }
+      .flexClass {
+        margin-top: -30px;
+      }
+      .left {
+        margin-left: -200px;
+      }
+      .headerOutline {
+        outline: 1px solid gainsboro;
+        height: 60px;
       }
     </style>
+    
   </head>
 
 
@@ -124,22 +138,52 @@ bulma.min.css"
 <!------------ SHoW EACH ITEM ----------------------- -->
         <div class="eachItem">
          
-                  <h1><%= currentFoodItem.itemName %></h1>
-                  <p class="des">Description: <%= currentFoodItem.description %></p> 
+              <h1><%= currentFoodItem.itemName %></h1>
+              <p >Description: <%= currentFoodItem.description %></p> 
+              <p class="des"></p>
+              <div class="columns">
+                  <div class="column">
+                    <p>Price: <%= currentFoodItem.price%></p>
+                  </div>
+                  <div class="column left">
+                    <p>PostedTime: <%= currentFoodItem.time%></p>
+                  </div>
+              </div>
+              <div class="columns flexClass">
+                  <div class="column">
+                      <p>Location: <%= currentFoodItem.location%></p>
+                  </div>
+                  <div class="column left">
+                      <p>OrderNote: <%= currentFoodItem.orderNote%></p>
+                   </div>
+              </div>
+              <p class="pImg"><img src="<%= currentFoodItem.img %>" /></p>
+              
+              <div class="columns">
+                <div class="column ">
+                   <p>UserName: <%= currentFoodItem.userName%></p>
+                </div>
+                <div class="column left">
+                    <p>Email: <%= currentFoodItem.email%></p>
+                </div>
+              </div>
 
-                  <p>Price: <%= currentFoodItem.price%></p>
-                  <p>PostedTime: <%= currentFoodItem.time%></p>
-                  <p>OrderNote: <%= currentFoodItem.orderNote%></p>
-                  <p>Location: <%= currentFoodItem.location%></p>
-                  <img src="<%= currentFoodItem.img %>" />
-                    
-                  <p>UserName: <%= currentFoodItem.userName%></p>
-                  <p>Email: <%= currentFoodItem.email%></p>
-                  <a href="/homeServices/placeOrder"><button>Place Order</button></a>
-
-
-        
-        </div>
+              <!-- Buttons FOR EDIT DELETE BUY -->
+              <div class="columns">
+                  <div class="column">
+                    <a href="/homeServices/<%=currentFoodItem._id; %>/edit"> <button class="button is-success">EDIT</button></a>
+                  </div>
+                  <div class="column left">
+                    <form action="/homeServices/<%=currentFoodItem._id; %>?_method=DELETE" method="POST">
+                      
+                      <input type="submit" value="DELETE" class="button is-danger"/>
+                    </form>
+                  </div>
+                  <div class="column left">
+                    <a href="/homeServices/placeorder"> <button class="button is-success">Place Order</button></a>
+                  </div>
+            </div>
+      </div>
 
 
 <!-------------- FOOTER ---------- -->
