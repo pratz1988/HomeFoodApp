@@ -10,254 +10,287 @@
 bulma.min.css"
       rel="stylesheet"
     />
-   
-    <link rel="stylesheet" href="/css/main.css" /> 
+
+    <link rel="stylesheet" href="/css/main.css" />
   </head>
 
   <style>
-      /* .navWidth {
+    /* .navWidth {
         display: inline-block;
       } */
-      /* .navClass {
+    /* .navClass {
         
         z-index: 1;
         margin-top: 10px;
         margin-bottom: 10px;
         
       } */
-      .right {
-        text-align: right;
-      }
-      .videoClass {
-        width: 100%;
-        height: 500px;
-        outline: 2px solid white;
-        overflow: scroll;
-        margin: 0 auto;
+    .right {
+      text-align: right;
+    }
+    .videoClass {
+      width: 100%;
+      height: 500px;
+      outline: 2px solid white;
+      overflow: scroll;
+      margin: 0 auto;
 
-       /* position: relative; */
-      }
-      .video1{
-        margin-top: 10px;
-         width: vw;
-        height: 430px;
-        
-      }
-      .marketplace1 {
-       
-        width: 600px;
-        /* outline: 1px solid red; */
-        margin: 50px 100px 20px 250px;
-      }
-    
-      h1 {
-        text-align: center;
-        color: darkgreen;
-        font-weight: 600;
-        font-size: 20px;
-        margin-bottom: 20px;
-      }
-      .marketplaceP{
-        text-align: start;
-        width: 400px;
-        margin-left: 120px;
-        background-color: transparent;
-      }
-      .otherServices {
-        margin: 30px 50px 50px 100px;
-        /* outline: 1px solid red; */
-      }
-      .otherServicesDiv {
-        margin-left: 70px;
-        /* outline: 1px solid red; */
-      }
-      h2 {
-        color: darkgreen;
-        font-weight: 700;
-        font-size: 15px;
-        margin-bottom: 10px;
-      }
-      .otherServicesP {
-        text-align: left;
-        width: 300px;
-        margin-bottom: 20px;
-      }
-      .homeFoodImg {
-        margin-left: -40px;
-        border-radius: 10px;
-      }
-      footer {
-        margin-top: 50px;
-      }
-      .headerOutline {
-        outline: 1px solid gainsboro;
-        height: 65px;
-      }
+      /* position: relative; */
+    }
+    .video1 {
+      margin-top: 10px;
+      width: vw;
+      height: 430px;
+    }
+    .marketplace1 {
+      width: 600px;
+      /* outline: 1px solid red; */
+      margin: 50px 100px 20px 250px;
+    }
+
+    h1 {
+      text-align: center;
+      color: darkgreen;
+      font-weight: 600;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    .marketplaceP {
+      text-align: start;
+      width: 400px;
+      margin-left: 120px;
+      background-color: transparent;
+    }
+    .otherServices {
+      margin: 30px 50px 50px 100px;
+      /* outline: 1px solid red; */
+    }
+    .otherServicesDiv {
+      margin-left: 70px;
+      /* outline: 1px solid red; */
+    }
+    h2 {
+      color: darkgreen;
+      font-weight: 700;
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+    .otherServicesP {
+      text-align: left;
+      width: 300px;
+      margin-bottom: 20px;
+    }
+    .homeFoodImg {
+      margin-left: -40px;
+      border-radius: 10px;
+    }
+    footer {
+      margin-top: 50px;
+    }
+    .headerOutline {
+      outline: 1px solid gainsboro;
+      height: 65px;
+    }
   </style>
-  
-  
+
   <body>
-
     <!---------- NAV BAR  --------------->
-    <nav class="navbar navClass is-fixed-top headerOutline" role="navigation" aria-label="main navigation">
-          <div class="navbar-brand">      
-            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-            </a>
-          </div>
-        <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start">
-          <a class="navbar-item" href="/homeServices"><br>
-          <p> <i class="fas fa-home"></i></p>
+    <nav
+      class="navbar navClass is-fixed-top headerOutline"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <a
+          role="button"
+          class="navbar-burger burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="/homeServices"
+            ><br />
+            <p><i class="fas fa-home"></i></p>
             Home
-          </a>       
-          <a class="navbar-item"  href="/homeServices/howItWorks"> 
-            <p><i class="fas fa-network-wired"></i></p>   
+          </a>
+          <a class="navbar-item" href="/homeServices/howItWorks">
+            <p><i class="fas fa-network-wired"></i></p>
             How It Works
-          </a>     
-          <a class="navbar-item"  href="/homeServices/menu"> 
-            <p><i class="fas fa-book-open"></i></p>    
+          </a>
+          <a class="navbar-item" href="/homeServices/menu">
+            <p><i class="fas fa-book-open"></i></p>
             Menu
-          </a>   
+          </a>
           <a class="navbar-item" href="/homeServices/new">
-          <div><i class="fas fa-hamburger"></i></div>
-          <div>SellFood</div>
-          </a>     
-        <a class="navbar-item" href="/homeServices/sellItems">
-          <p><i class="fas fa-pizza-slice"></i></p> 
-          BuyFood
-          </a>     
-      <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
-            Other Services
+            <div><i class="fas fa-hamburger"></i></div>
+            <div>Sell Food</div>
           </a>
+          <a class="navbar-item" href="/homeServices/sellItems">
+            <p><i class="fas fa-pizza-slice"></i></p>
+            Buy Food
+          </a>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Other Services
+            </a>
 
-        <div class="navbar-dropdown">
-          <a class="navbar-item">
-            About Us
-          </a>
-          <a class="navbar-item">
-            Maid Services
-          </a>
-          <a class="navbar-item">
-           Child Care
-          </a>
-          <hr class="navbar-divider" />
-          <a class="navbar-item">
-            Report an issue
-          </a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item">
+                About Us
+              </a>
+              <a class="navbar-item">
+                Maid Services
+              </a>
+              <a class="navbar-item">
+                Child Care Services
+              </a>
+              <hr class="navbar-divider" />
+              <a class="navbar-item">
+                Report an issue
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
 
-    <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <a class="button is-success" href="/users/signUp">
-              <strong>Sign up</strong>
-            </a>
-            <a class="button is-light" href="/users/login">
-              Log in
-            </a>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-success" href="/users/signUp">
+                <strong>Sign up</strong>
+              </a>
+              <a class="button is-light" href="/users/login">
+                Log in
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </nav>
-<!------------- Video ----------->
-  <header class="videoClass">
-    <div class="video1">
-      
-      <video autoplay loop >     
-          <source src="/video/food.mp4" type="video/mp4">
-          <!-- <source src="movie.ogg" type="video/ogg"> --> 
+    </nav>
+    <!------------- Video ----------->
+    <header class="videoClass">
+      <div class="video1">
+        <video autoplay loop>
+          <source src="/video/food.mp4" type="video/mp4" />
+          <!-- <source src="movie.ogg" type="video/ogg"> -->
         </video>
       </div>
-  </header>
+    </header>
 
-<!------------------ main content Other Services--------------------->
-  <div class="marketplace1">
-    <div class="marketplace2">
-    <h1> Home Services Made Simple</h1>
-    <p class="marketplaceP">It provides a market place for HomeFood, Maid Service and Nanny's.Any one can buy food & Sell food using this App.
-        Any one register and offer thier services like maid & nanny.
-    </p>
-  </div>
-</div>
-
-<!------- Other Services ------->
-  <div class="columns otherServices">
-        <div class="column otherServicesDiv">
-              <h2> HOMEFOOD </h2>
-              <p class="otherServicesP">It provides a market place for HomeFood, Maid Service and Nanny's.Any one can buy food & Sell food using this App.
-                  Any one register and offer thier services like maid & nanny.</p>
-              <div class="buttons">        
-                  <a  href="/homeServices/sellItems"> <button class="button is-success">FoodMenu</button></a>
-              </div>
-        </div>
-        <div class="column">
-            <img src="/images/foodImg.jpg" width="400" height="200" class="homeFoodImg">
-        </div>
-   
-  </div>
-  
-
-  <div class="columns otherServices">
-
-      <div class="column otherServicesDiv">
-          <img src="/images/maidservice.jpg" width="400" height="200" class="homeFoodImg">
-         </div>
-  
-      <div class="column">
-          <h2> MAID SERVICE </h2>
-          <p class="otherServicesP">It provides a market place for HomeFood, Maid Service and Nanny's.Any one can buy food & Sell food using this App.
-              Any one register and offer thier services like maid & nanny.</p>
-          <div class="buttons">        
-              <a  href="#"> <button class="button is-success">MaidService</button></a>
-          </div>
+    <!------------------ main content Other Services--------------------->
+    <div class="marketplace1">
+      <div class="marketplace2">
+        <h1>Home Services Made Simple</h1>
+        <p class="marketplaceP">
+          A modern marketplace for home food, maid services and child care
+          services. As a home user, you can advertise your services here and buy
+          services or home food available in your neighborhood.
+        </p>
       </div>
- 
-  </div> 
+    </div>
 
-  <div class="columns otherServices">
+    <!------- Other Services ------->
+    <div class="columns otherServices">
       <div class="column otherServicesDiv">
-            <h2> CHILDCARE </h2>
-            <p class="otherServicesP">It provides a market place for HomeFood, Maid Service and Nanny's.Any one can buy food & Sell food using this App.
-                Any one register and offer thier services like maid & nanny.</p>
-            <div class="buttons">        
-                <a  href="#"> <button class="button is-success">ChildCare</button></a>
-            </div>
+        <h2>Home Food</h2>
+        <p class="otherServicesP">
+          Enjoy the decliciousness of home food in your neighborhood. Just with
+          the click of few buttons you can buy your favourite home food or you
+          can advertise your aromatic home recipies.
+        </p>
+        <div class="buttons">
+          <a href="/homeServices/sellItems">
+            <button class="button is-success">FoodMenu</button></a
+          >
+        </div>
       </div>
       <div class="column">
-          <img src="/images/childcare.jpg" width="400" height="200" class="homeFoodImg">
+        <img
+          src="/images/foodImg.jpg"
+          width="400"
+          height="200"
+          class="homeFoodImg"
+        />
       </div>
- 
-</div>
-  
+    </div>
 
-  <!-------------- FOOTER ---------- -->
-  <footer class="footer">
+    <div class="columns otherServices">
+      <div class="column otherServicesDiv">
+        <img
+          src="/images/maidservice.jpg"
+          width="400"
+          height="200"
+          class="homeFoodImg"
+        />
+      </div>
+
+      <div class="column">
+        <h2>Maid Services</h2>
+        <p class="otherServicesP">
+          Maid services at your finger tips. Just with the click of few buttons
+          you can advertise your services or you can reach out to a service
+          provider.
+        </p>
+        <div class="buttons">
+          <a href="#">
+            <button class="button is-success">MaidService</button></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="columns otherServices">
+      <div class="column otherServicesDiv">
+        <h2>Child Care Services</h2>
+        <p class="otherServicesP">
+          Child Care services at your finger tips. Just with the click of few
+          buttons you can advertise your services or you can reach out to a
+          service provider.
+        </p>
+        <div class="buttons">
+          <a href="#"> <button class="button is-success">ChildCare</button></a>
+        </div>
+      </div>
+      <div class="column">
+        <img
+          src="/images/childcare.jpg"
+          width="400"
+          height="200"
+          class="homeFoodImg"
+        />
+      </div>
+    </div>
+
+    <!-------------- FOOTER ---------- -->
+    <footer class="footer">
       <div class="content has-text-centered">
-          <div class="columns">
-              <div class="column">
-                  <p>
-                    <strong>HomeServices App </strong> by <a href="#">Pratz</a> All rights reserved 2019. 
-                  </p>
-                </div>
-                <div class="column">
-                <p>Contact Us</p>
-                <p> Privacy Policy</p>
-                <p>Trems and Conditions</p>
-                <p>999-999-8888</p>
-              
-              </div>
+        <div class="columns">
+          <div class="column">
+            <p>
+              <strong>HomeServices App </strong> by <a href="#">Pratz</a> All
+              rights reserved 2019.
+            </p>
           </div>
+          <div class="column">
+            <p>Contact Us</p>
+            <p>Privacy Policy</p>
+            <p>Trems and Conditions</p>
+            <p>999-999-8888</p>
+          </div>
+        </div>
       </div>
     </footer>
 
-  <!---------- Font Awesome ---------->
-  <script src="https://kit.fontawesome.com/79a1b0e7d3.js" crossorigin="anonymous"></script>
+    <!---------- Font Awesome ---------->
+    <script
+      src="https://kit.fontawesome.com/79a1b0e7d3.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

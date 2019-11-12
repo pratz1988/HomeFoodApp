@@ -10,35 +10,32 @@
 bulma.min.css"
       rel="stylesheet"
     />
-   
-   
+
     <!-- <link rel="stylesheet" href="/css/main.css" />  -->
 
-
-  <style>
-     
+    <style>
       .right {
         text-align: right;
       }
-      
-      img {  
+
+      img {
         position: relative;
         z-index: -1;
         width: 100%;
         height: 500px;
         margin-top: 100px;
       }
-      .howItWorksH1{
-          width: 400px;
+      .howItWorksH1 {
+        width: 400px;
         text-align: justify;
-        margin-top: -350px;
+        margin-top: -400px;
         margin-left: 480px;
         color: darkgreen;
         font-weight: bold;
         z-index: 1;
       }
-      .howItWorksP{
-          width: 400px;
+      .howItWorksP {
+        width: 400px;
         text-align: justify;
         /* margin-top: 240px; */
         margin-left: 350px;
@@ -52,102 +49,120 @@ bulma.min.css"
         outline: 1px solid gainsboro;
         height: 65px;
       }
-  </style>
-    </head>
-  
-<body>
+    </style>
+  </head>
 
+  <body>
     <!---------- NAV BAR  --------------->
-    <nav class="navbar navClass is-fixed-top headerOutline" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">      
-          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
+    <nav
+      class="navbar navClass is-fixed-top headerOutline"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <a
+          role="button"
+          class="navbar-burger burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
       <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-        <a class="navbar-item" href="/homeServices"><br>
-        <p> <i class="fas fa-home"></i></p>
-          Home
-        </a>       
-        <a class="navbar-item"  href="/homeServices/howItWorks"> 
-          <p><i class="fas fa-network-wired"></i></p>   
-          How It Works
-        </a>     
-        <a class="navbar-item"  href="/homeServices/menu"> 
-          <p><i class="fas fa-book-open"></i></p>    
-          Menu
-        </a>   
-        <a class="navbar-item" href="/homeServices/new">
-        <div><i class="fas fa-hamburger"></i></div>
-        <div>SellFood</div>
-        </a>     
-      <a class="navbar-item" href="/homeServices/sellItems">
-        <p><i class="fas fa-pizza-slice"></i></p> 
-        BuyFood
-        </a>     
-    <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          Other Services
-        </a>
-
-      <div class="navbar-dropdown">
-        <a class="navbar-item">
-          About Us
-        </a>
-        <a class="navbar-item">
-          Maid Services
-        </a>
-        <a class="navbar-item">
-         Child Care
-        </a>
-        <hr class="navbar-divider" />
-        <a class="navbar-item">
-          Report an issue
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-success" href="/users/signUp">
-            <strong>Sign up</strong>
+        <div class="navbar-start">
+          <a class="navbar-item" href="/homeServices"
+            ><br />
+            <p><i class="fas fa-home"></i></p>
+            Home
           </a>
-          <a class="button is-light" href="/users/login">
-            Log in
+          <a class="navbar-item" href="/homeServices/howItWorks">
+            <p><i class="fas fa-network-wired"></i></p>
+            How It Works
           </a>
+          <a class="navbar-item" href="/homeServices/menu">
+            <p><i class="fas fa-book-open"></i></p>
+            Menu
+          </a>
+          <a class="navbar-item" href="/homeServices/new">
+            <div><i class="fas fa-hamburger"></i></div>
+            <div>Sell Food</div>
+          </a>
+          <a class="navbar-item" href="/homeServices/sellItems">
+            <p><i class="fas fa-pizza-slice"></i></p>
+            Buy Food
+          </a>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Other Services
+            </a>
+
+            <div class="navbar-dropdown">
+              <a class="navbar-item">
+                About Us
+              </a>
+              <a class="navbar-item">
+                Maid Services
+              </a>
+              <a class="navbar-item">
+                Child Care Services
+              </a>
+              <hr class="navbar-divider" />
+              <a class="navbar-item">
+                Report an issue
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-success" href="/users/signUp">
+                <strong>Sign up</strong>
+              </a>
+              <a class="button is-light" href="/users/login">
+                Log in
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</nav>
+    </nav>
 
     <!--------------- Haeder Image ---------------------->
-    
+
     <section>
-        <div>
-            <img src="https://images.pexels.com/photos/616404/pexels-photo-616404.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260.png" />
-        </div>
-   
-    <div >
-  <h1 class="howItWorksH1"> HOW IT WORKS </h1>
-  <p class="howItWorksP">
-        The idea of 'homeServices' is to provide a marketplace for food. 
-        Selles can advertisve the food they make and buyers can savor the food they crave. 
-        You can browse the food of your choice, order it and savor it. 
-        It is pretty straightforward to order - just click on the food you want and order it after setttig up your login.
-  </p>
-</div>
-</section>
- 
+      <div>
+        <img
+          src="https://images.pexels.com/photos/616404/pexels-photo-616404.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260.png"
+        />
+      </div>
 
+      <div>
+        <h1 class="howItWorksH1"></h1>
+        <p class="howItWorksP">
+          When it comes to food or chid care or maid services, no one
+          understands it better than your neighborhood home user. This modern
+          marketplace aims at brining the buyers and sellers together and make
+          it very easy of a seller to advertise their food or services and a
+          seller to buy food or service. As a buyer, after you register or
+          login, you can choose the items you want from the menu and buy them or
+          contact the seller in case of value added services. As a seller, after
+          you register or login, you can advertise your services by using the
+          website. Please do add an item description and also your contact
+          information.
+        </p>
+      </div>
+    </section>
 
-   <!------------        FONTAWESOME             ---------- -->
-   <script src="https://kit.fontawesome.com/79a1b0e7d3.js" crossorigin="anonymous"></script>
-  
+    <!------------        FONTAWESOME             ---------- -->
+    <script
+      src="https://kit.fontawesome.com/79a1b0e7d3.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

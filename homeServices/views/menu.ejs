@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/
 bulma.min.css"
-    rel="stylesheet"
-  />
+      rel="stylesheet"
+    />
 
     <style>
       .eachItem {
@@ -22,18 +22,17 @@ bulma.min.css"
         height: 200px;
       }
       .allItemsContainer {
-       
         /* outline: 1px solid red; */
         width: 80%;
         margin: 0 auto;
         overflow: scroll;
       }
-      
+
       h1 {
         margin-top: 80px;
         text-align: center;
         font-weight: 700;
-        color:forestgreen;
+        color: forestgreen;
         font-size: 25px;
         margin-bottom: 10px;
       }
@@ -42,136 +41,139 @@ bulma.min.css"
         height: 65px;
       }
       .footerHeight {
-          height: 200px;
+        height: 200px;
       }
-      
     </style>
   </head>
 
   <body>
+    <!---------- NAV BAR  --------------->
 
-     
- <!---------- NAV BAR  --------------->
-
-<nav class="navbar  is-fixed-top headerOutline" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">      
-      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-  <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-    <a class="navbar-item" href="/homeServices"><br>
-    <p> <i class="fas fa-home"></i></p>
-      Home
-    </a>       
-    <a class="navbar-item"  href="/homeServices/howItWorks"> 
-      <p><i class="fas fa-network-wired"></i></p>   
-      How It Works
-    </a>     
-    <a class="navbar-item"  href="/homeServices/menu"> 
-      <p><i class="fas fa-book-open"></i></p>    
-      Menu
-    </a>   
-    <a class="navbar-item" href="/homeServices/new">
-    <div><i class="fas fa-hamburger"></i></div>
-    <div>SellFood</div>
-    </a>     
-  <a class="navbar-item" href="/homeServices/sellItems">
-    <p><i class="fas fa-pizza-slice"></i></p> 
-    BuyFood
-    </a>     
-<div class="navbar-item has-dropdown is-hoverable">
-    <a class="navbar-link">
-      Other Services
-    </a>
-    <div class="navbar-dropdown">
-        <a class="navbar-item">
-          About Us
-        </a>
-        <a class="navbar-item">
-          Maid Services
-        </a>
-        <a class="navbar-item">
-         Child Care
-        </a>
-        <hr class="navbar-divider" />
-        <a class="navbar-item">
-          Report an issue
+    <nav
+      class="navbar  is-fixed-top headerOutline"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <a
+          role="button"
+          class="navbar-burger burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
         </a>
       </div>
-    </div>
-  </div>
-
-  <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <a class="button is-success" href="/users/signUp">
-              <strong>Sign up</strong>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="/homeServices"
+            ><br />
+            <p><i class="fas fa-home"></i></p>
+            Home
+          </a>
+          <a class="navbar-item" href="/homeServices/howItWorks">
+            <p><i class="fas fa-network-wired"></i></p>
+            How It Works
+          </a>
+          <a class="navbar-item" href="/homeServices/menu">
+            <p><i class="fas fa-book-open"></i></p>
+            Menu
+          </a>
+          <a class="navbar-item" href="/homeServices/new">
+            <div><i class="fas fa-hamburger"></i></div>
+            <div>Sell Food</div>
+          </a>
+          <a class="navbar-item" href="/homeServices/sellItems">
+            <p><i class="fas fa-pizza-slice"></i></p>
+            Buy Food
+          </a>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Other Services
             </a>
-            <a class="button is-light" href="/users/login">
-              Log in
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <!-- ----------   FOODD ITEMS LIST ------------->
-
-  <div>
-      <h1>Pick Your Meals</h1>
-    </div>
-    
-    <div class="allItemsContainer">
-       
-        <% let i = 1; %>
-      <% allItems.forEach((eachItem,index) => {%>
-        <%  if(index %3 === 0) { i=1 ;%>
-        <div class="columns">
-          <% } %>
-          <div class="column eachItem input">
-            
-            <a href="/homeServices/<%= eachItem._id %>">
-              <img src="<%= eachItem.img %>" />
-            </a>
-            <p>ItemName: <%=eachItem.itemName; %></p>
-            <p>Price: <%=eachItem.price; %></p>
-           
-           
-          </div>
-          <% if(i %3 === 0) { %>
-               </div>
-          <% } i++;%>
-               
-          <% }) %>
-    </div>
-
- <!-------------- FOOTER ---------- -->
-<footer class="footer footerHeight">
-    <div class="content has-text-centered">
-        <div class="columns">
-            <div class="column">
-                <p>
-                  <strong>HomeServices App </strong> by <a href="#">Pratz</a> All rights reserved 2019. 
-                </p>
-              </div>
-              <div class="column">
-              <p>Contact Us</p>
-              <p> Privacy Policy</p>
-              <p>Trems and Conditions</p>
-              <p>999-999-8888</p>
-            
+            <div class="navbar-dropdown">
+              <a class="navbar-item">
+                About Us
+              </a>
+              <a class="navbar-item">
+                Maid Services
+              </a>
+              <a class="navbar-item">
+                Child Care Servies
+              </a>
+              <hr class="navbar-divider" />
+              <a class="navbar-item">
+                Report an issue
+              </a>
             </div>
+          </div>
         </div>
-    </div>
-  </footer>
 
-  
-  <!---------- Font Awesome ---------->
-<script src="https://kit.fontawesome.com/79a1b0e7d3.js" crossorigin="anonymous"></script>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-success" href="/users/signUp">
+                <strong>Sign up</strong>
+              </a>
+              <a class="button is-light" href="/users/login">
+                Log in
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ----------   FOODD ITEMS LIST ------------->
+
+    <div>
+      <h1>Select Your Food</h1>
+    </div>
+
+    <div class="allItemsContainer">
+      <% let i = 1; %> <% allItems.forEach((eachItem,index) => {%> <% if(index
+      %3 === 0) { i=1 ;%>
+      <div class="columns">
+        <% } %>
+        <div class="column eachItem input">
+          <a href="/homeServices/<%= eachItem._id %>">
+            <img src="<%= eachItem.img %>" />
+          </a>
+          <p>ItemName: <%=eachItem.itemName; %></p>
+          <p>Price: <%=eachItem.price; %></p>
+        </div>
+        <% if(i %3 === 0) { %>
+      </div>
+      <% } i++;%> <% }) %>
+    </div>
+
+    <!-------------- FOOTER ---------- -->
+    <footer class="footer footerHeight">
+      <div class="content has-text-centered">
+        <div class="columns">
+          <div class="column">
+            <p>
+              <strong>HomeServices App </strong> by <a href="#">Pratz</a> All
+              rights reserved 2019.
+            </p>
+          </div>
+          <div class="column">
+            <p>Contact Us</p>
+            <p>Privacy Policy</p>
+            <p>Trems and Conditions</p>
+            <p>999-999-8888</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!---------- Font Awesome ---------->
+    <script
+      src="https://kit.fontawesome.com/79a1b0e7d3.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

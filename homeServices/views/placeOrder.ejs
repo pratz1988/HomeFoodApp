@@ -1,141 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/
 bulma.min.css"
-    rel="stylesheet"
-  />
+      rel="stylesheet"
+    />
     <style>
-        
-       .order {
-            width: 500px;
-            height: 300px;
-            margin: 150px 0 0 400px;
-            outline: 1px solid whitesmoke;
-        }
-        header {
-            background-color: black;
-            color: white;
-            font-weight: bold;
-            z-index: 1;
-
-        }
-    .headerOutline {
-        background-color: rgb(116, 190, 116);
+      .order {
+        width: 500px;
+        height: 300px;
+        margin: 150px 0 0 400px;
+        outline: 1px solid whitesmoke;
+      }
+      header {
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        z-index: 1;
+      }
+      .headerOutline {
+        background-color: black;
         outline: 2px solid gainsboro;
         height: 60px;
-  }
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    
-   <!---------- NAV BAR  --------------->
-  
-   <nav class="navbar  is-fixed-top headerOutline" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">      
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+  <body>
+    <!---------- NAV BAR  --------------->
+
+    <nav
+      class="navbar  is-fixed-top headerOutline"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <a
+          role="button"
+          class="navbar-burger burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </a>
       </div>
-    <div id="navbarBasicExample" class="navbar-menu">
+      <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-      <a class="navbar-item" href="/homeServices"><br>
-      <p> <i class="fas fa-home"></i></p>
-        Home
-      </a>       
-      <a class="navbar-item"  href="/homeServices/howItWorks"> 
-        <p><i class="fas fa-network-wired"></i></p>   
-        How It Works
-      </a>     
-      <a class="navbar-item"  href="/homeServices/menu"> 
-        <p><i class="fas fa-book-open"></i></p>    
-        Menu
-      </a>   
-      <a class="navbar-item" href="/homeServices/new">
-      <div><i class="fas fa-hamburger"></i></div>
-      <div>SellFood</div>
-      </a>     
-    <a class="navbar-item" href="/homeServices/sellItems">
-      <p><i class="fas fa-pizza-slice"></i></p> 
-      BuyFood
-      </a>     
-  <div class="navbar-item has-dropdown is-hoverable">
-      <a class="navbar-link">
-        Other Services
-      </a>
-      <div class="navbar-dropdown">
-          <a class="navbar-item">
-            About Us
+          <a class="navbar-item" href="/homeServices"
+            ><br />
+            <p><i class="fas fa-home"></i></p>
+            Home
           </a>
-          <a class="navbar-item">
-            Maid Services
+          <a class="navbar-item" href="/homeServices/howItWorks">
+            <p><i class="fas fa-network-wired"></i></p>
+            How It Works
           </a>
-          <a class="navbar-item">
-           Child Care
+          <a class="navbar-item" href="/homeServices/menu">
+            <p><i class="fas fa-book-open"></i></p>
+            Menu
           </a>
-          <hr class="navbar-divider" />
-          <a class="navbar-item">
-            Report an issue
+          <a class="navbar-item" href="/homeServices/new">
+            <div><i class="fas fa-hamburger"></i></div>
+            <div>Sell Food</div>
           </a>
-        </div>
-      </div>
-    </div>
-  
-    <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons">
-               
-                <a class="button is-light" href="/homeServices">
-                  LogOut
-                </a>
-              </div>
+          <a class="navbar-item" href="/homeServices/sellItems">
+            <p><i class="fas fa-pizza-slice"></i></p>
+            Buy Food
+          </a>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Other Services
+            </a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item">
+                About Us
+              </a>
+              <a class="navbar-item">
+                Maid Services
+              </a>
+              <a class="navbar-item">
+                Child Care Services
+              </a>
+              <hr class="navbar-divider" />
+              <a class="navbar-item">
+                Report an issue
+              </a>
             </div>
           </div>
         </div>
-      </nav>
-      
-  <!-- ORDER NOTE -->
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-light" href="/homeServices">
+                LogOut
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ORDER NOTE -->
 
     <div class="order">
-        <h2>Thanks for using HomeServices App!</h2>
-        <h3>Your order is confirmed</h3>
-        <h3>You will get a confirmation email.</h3>
-        <h4>Order number: H164632062</h4>
-        <h4>Order Total: $12</h4>
-        <a> View Oder Details</a>
+      <h2>Thanks for using HomeServices App!</h2>
+      <h3>Your order is confirmed</h3>
+      <h3>You will get a confirmation email.</h3>
+      <h4>Order number: H164632062</h4>
+      <h4>Order Total: $12</h4>
+      <a> View Oder Details</a>
     </div>
 
     <!-------------- FOOTER ---------- -->
-  <footer class="footer">
-        <div class="content has-text-centered">
-            <div class="columns">
-                <div class="column">
-                    <p>
-                      <strong>HomeServices App </strong> by <a href="#">Pratz</a> All rights reserved 2019. 
-                    </p>
-                  </div>
-                  <div class="column">
-                  <p>Contact Us</p>
-                  <p> Privacy Policy</p>
-                  <p>Trems and Conditions</p>
-                  <p>999-999-8888</p>
-                
-                </div>
-            </div>
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <div class="columns">
+          <div class="column">
+            <p>
+              <strong>HomeServices App </strong> by <a href="#">Pratz</a> All
+              rights reserved 2019.
+            </p>
+          </div>
+          <div class="column">
+            <p>Contact Us</p>
+            <p>Privacy Policy</p>
+            <p>Trems and Conditions</p>
+            <p>999-999-8888</p>
+          </div>
         </div>
-      </footer>
-    
+      </div>
+    </footer>
+
     <!---------- Font Awesome ---------->
-    <script src="https://kit.fontawesome.com/79a1b0e7d3.js" crossorigin="anonymous"></script>
-    
-    
-</body>
+    <script
+      src="https://kit.fontawesome.com/79a1b0e7d3.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
