@@ -10,8 +10,96 @@
 bulma.min.css"
       rel="stylesheet"
     />
+
+    <style>
+        .loginForm {
+         margin-top: 100px;
+           width: 50%;
+           margin-left: 100px;
+           height: 500px;
+           margin-bottom: 100px;
+           overflow: scroll;
+           margin-left: 250px;
+       } 
+       .inputWidth{
+         width: 400px;
+       }
+       .headerOutline {
+       outline: 1px solid gainsboro;
+       height: 60px;
+       }
+       .loginButton {
+         width: 400px;
+       }
+       .signUp {
+         text-align: center;
+   
+       }
+     </style>
+
 </head>
 <body>
+
+
+    <!---------- NAV BAR  --------------->
+
+    <nav class="navbar  is-fixed-top headerOutline" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">      
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+        <a class="navbar-item" href="/homeServices"><br>
+        <p> <i class="fas fa-home"></i></p>
+          Home
+        </a>       
+        <a class="navbar-item"  href="/homeServices/howItWorks"> 
+          <p><i class="fas fa-network-wired"></i></p>   
+          How It Works
+        </a>     
+        <a class="navbar-item"  href="/homeServices/menu"> 
+          <p><i class="fas fa-book-open"></i></p>    
+          Menu
+        </a>   
+        <a class="navbar-item" href="/homeServices/new">
+        <div><i class="fas fa-hamburger"></i></div>
+        <div>SellFood</div>
+        </a>     
+      <a class="navbar-item" href="/homeServices/sellItems">
+        <p><i class="fas fa-pizza-slice"></i></p> 
+        BuyFood
+        </a>     
+     <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Other Services
+        </a>
+        <div class="navbar-dropdown">
+            <a class="navbar-item">
+              About Us
+            </a>
+            <a class="navbar-item">
+              Maid Services
+            </a>
+            <a class="navbar-item">
+             Child Care
+            </a>
+            <hr class="navbar-divider" />
+            <a class="navbar-item">
+              Report an issue
+            </a>
+          </div>
+        </div>
+      </div>
+     
+      </div>
+     </nav>
+    
+<!-- SIGN UP FORM -->
+<div class="loginForm input">
     <form action="/users/register" method="POST">
       <div class="field is-horizontal">
           <div class="field-label is-normal">
@@ -20,7 +108,7 @@ bulma.min.css"
           <div class="field-body">
             <div class="field">
               <p class="control is-expanded has-icons-left">
-                <input class="input" type="text" name="name" id="name" placeholder="Name">
+                <input class="input inputWidth" type="text" name="name" id="name" placeholder="Name">
                 <span class="icon is-small is-left">
                   <i class="fas fa-user"></i>
                 </span>
@@ -43,7 +131,7 @@ bulma.min.css"
                     </a>
                   </p>
                   <p class="control is-expanded">
-                    <input class="input" type="tel" name="phoneNo" id="phoneNo" placeholder="Your phone number">
+                    <input class="input inputWidth" type="tel" name="phoneNo" id="phoneNo" placeholder="Your phone number">
                   </p>
                 </div>
                 <p class="help">Do not enter the first zero</p>
@@ -58,7 +146,7 @@ bulma.min.css"
                 <div class="field-body">
                   <div class="field">
                     <div class="control">
-                      <input class="input is-success" type="text" name="email" id="email" placeholder="Enter your email">
+                      <input class="input is-success inputWidth" type="text" name="email" id="email" placeholder="Enter your email">
                     </div>
                     <p class="help is-danger">
                       This field is required
@@ -74,7 +162,7 @@ bulma.min.css"
                   <div class="field-body">
                     <div class="field">
                       <div class="control">
-                        <input class="input is-danger" type="text" name="password" id="password" placeholder="Enter your password">
+                        <input class="input is-danger inputWidth" type="text" name="password" id="password" placeholder="Enter your password">
                       </div>
                       <p class="help is-danger">
                         This field is required
@@ -90,7 +178,7 @@ bulma.min.css"
                   <div class="field-body">
                     <div class="field">
                       <p class="control is-expanded has-icons-left">
-                        <input class="input" type="text" name="location" id="location" placeholder="Name">
+                        <input class="input inputWidth" type="text" name="location" id="location" placeholder="Name">
                         <span class="icon is-small is-left">
                           <i class="fas fa-user"></i>
                         </span>
@@ -113,5 +201,30 @@ bulma.min.css"
                     </div>
                   </div>
     </form>
+  </div>
+
+             <!-------------- FOOTER ---------- -->
+<footer class="footer footerHeight">
+    <div class="content has-text-centered">
+        <div class="columns">
+            <div class="column">
+                <p>
+                  <strong>HomeServices App </strong> by <a href="#">Pratz</a> All rights reserved 2019. 
+                </p>
+              </div>
+              <div class="column">
+              <p>Contact Us</p>
+              <p> Privacy Policy</p>
+              <p>Trems and Conditions</p>
+              <p>999-999-8888</p>
+            
+            </div>
+        </div>
+    </div>
+  </footer>
+
+  
+  <!---------- Font Awesome ---------->
+<script src="https://kit.fontawesome.com/79a1b0e7d3.js" crossorigin="anonymous"></script>
 </body>
 </html>

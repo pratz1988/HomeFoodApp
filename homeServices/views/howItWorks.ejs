@@ -13,34 +13,29 @@ bulma.min.css"
    
    
     <!-- <link rel="stylesheet" href="/css/main.css" />  -->
-  </head>
+
 
   <style>
-      /* .navWidth {
-        display: inline-block;
-      } */
-      .navClass {
-        display: flex;
-       
-      }
+     
       .right {
         text-align: right;
       }
       
       img {  
-        position: absolute;
+        position: relative;
         z-index: -1;
         width: 100%;
         height: 500px;
-        margin-top: 20px;
+        margin-top: 100px;
       }
       .howItWorksH1{
           width: 400px;
         text-align: justify;
-        margin-top: 200px;
+        margin-top: -350px;
         margin-left: 480px;
         color: darkgreen;
         font-weight: bold;
+        z-index: 1;
       }
       .howItWorksP{
           width: 400px;
@@ -50,84 +45,95 @@ bulma.min.css"
         color: darkgreen;
         font-weight: bold;
       }
+      /* .container {
+        margin-bottom: 200px;
+      } */
+      .headerOutline {
+        outline: 1px solid gainsboro;
+        height: 65px;
+      }
   </style>
+    </head>
   
-  
-  <body>
-  <div class="navClass has-text-success "> 
-    <div>
-      <a class="navbar-item" href="/homeServices">
-       <p> <i class="fas fa-home"></i></p>
-        Home
-      </a>    
-    </div>
-    
-    <div >
-        <a class="navbar-item"  href="/homeServices/howItWorks"> 
-          <p><i class="fas fa-network-wired"></i></p>
-          <!-- <p><i class="far fa-chart-network"></i></p> -->
-          How It Works
-        </a>  
-    </div>
+<body>
 
-    <div >
-      <a class="navbar-item" href="/homeServices/new">
+    <!---------- NAV BAR  --------------->
+    <nav class="navbar navClass is-fixed-top headerOutline" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">      
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+        <a class="navbar-item" href="/homeServices"><br>
+        <p> <i class="fas fa-home"></i></p>
+          Home
+        </a>       
+        <a class="navbar-item"  href="/homeServices/howItWorks"> 
+          <p><i class="fas fa-network-wired"></i></p>   
+          How It Works
+        </a>     
+        <a class="navbar-item"  href="/homeServices/menu"> 
+          <p><i class="fas fa-book-open"></i></p>    
+          Menu
+        </a>   
+        <a class="navbar-item" href="/homeServices/new">
         <div><i class="fas fa-hamburger"></i></div>
         <div>SellFood</div>
-      </a>     
-    </div>
-
-    <div >
+        </a>     
       <a class="navbar-item" href="/homeServices/sellItems">
         <p><i class="fas fa-pizza-slice"></i></p> 
         BuyFood
         </a>     
-    </div>
-<!-- 
-           <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">
-                OtherServices
-              </a>
-      
-              <div>
-                <a class="navbar-item">
-                  MaidService
-                </a>
-                <a class="navbar-item">
-                  Nanny
-                </a>
-                <a class="navbar-item">
-                  PostAnyQueries
-                </a>
-                <hr class="navbar-divider">
-                <a class="navbar-item">
-                  Report an issue
-                </a>
-              </div>
-            </div>
-          </div>
-       -->
+    <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Other Services
+        </a>
 
-        <div class="navbar-item right"> 
-          <div class="buttons">
-            <a class="button is-primary" href="/users/signUp">
-              <strong>Sign up</strong>
-            </a>
-            <a class="button is-light" href="/users/login">
-              Log in
-            </a>
-         
-         </div>
-      </div> 
+      <div class="navbar-dropdown">
+        <a class="navbar-item">
+          About Us
+        </a>
+        <a class="navbar-item">
+          Maid Services
+        </a>
+        <a class="navbar-item">
+         Child Care
+        </a>
+        <hr class="navbar-divider" />
+        <a class="navbar-item">
+          Report an issue
+        </a>
+      </div>
     </div>
+  </div>
+
+  <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-success" href="/users/signUp">
+            <strong>Sign up</strong>
+          </a>
+          <a class="button is-light" href="/users/login">
+            Log in
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
 
     <!--------------- Haeder Image ---------------------->
+    
     <section>
         <div>
             <img src="https://images.pexels.com/photos/616404/pexels-photo-616404.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260.png" />
         </div>
-    </section>
-
+   
+    <div >
   <h1 class="howItWorksH1"> HOW IT WORKS </h1>
   <p class="howItWorksP">
         The idea of 'homeServices' is to provide a marketplace for food. 
@@ -135,6 +141,10 @@ bulma.min.css"
         You can browse the food of your choice, order it and savor it. 
         It is pretty straightforward to order - just click on the food you want and order it after setttig up your login.
   </p>
+</div>
+</section>
+ 
+
 
    <!------------        FONTAWESOME             ---------- -->
    <script src="https://kit.fontawesome.com/79a1b0e7d3.js" crossorigin="anonymous"></script>

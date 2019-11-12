@@ -34,6 +34,19 @@ router.get("/", (req, res) => {
     });
   });
 
+  /////// Route to get Menu //////
+  router.get("/menu", (req, res) => {
+    sellItemModel.find({}, (err, allItems) => {
+      if (err) {
+        res.send(err);
+      } else {
+        res.render("menu.ejs", {
+          allItems
+        });
+      }
+    });
+  });
+
   /////// Route to HowItWorks //////////
   router.get("/howItWorks", (req, res) => { 
         res.render("howItWorks.ejs");

@@ -56,7 +56,7 @@ router.post("/register", (req, res) => {
       console.log("err");
     } else {
       // res.send('createdUser')
-      res.redirect("/homeServices");
+      res.redirect("/users/login");
     }
   });
 });
