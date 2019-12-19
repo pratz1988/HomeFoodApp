@@ -6,6 +6,7 @@ const app = express();
 const mongoose = require("mongoose");
 const session = require("express-session");
 const methodOverride = require("method-override");
+const bcrypt = require('bcrypt');
 
 ///PORT
 const PORT = process.env.PORT || 3000;
@@ -41,7 +42,7 @@ app.use("/homeServices", homeServicesController);
 app.use("/users", usersController);
 
 // =======================================
-//              PORT
+//              Listen
 // =======================================
 app.listen(PORT, (req, res) => {
   console.log("listening on  PORT 3000!");

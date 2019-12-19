@@ -1,6 +1,6 @@
 const express = require("express");
 // const session = require("express-session");
-// const bcrypt = require('bcrypt');
+const bcrypt = require('bcrypt');
 const router = express.Router();
 
 //MODEL
@@ -16,16 +16,19 @@ router.get("/signUp", (req, res) => {
   res.render("users/newSignUp.ejs");
 });
 
-//CREATE(POST)
+//CREATE(POST) for LOGIN
 router.post("/check", (req, res) => {
   userModel.findOne({ email: req.body.email }, (err, foundUser) => {
       if(err) throw err;
       if (foundUser && foundUser._id){
-        if(req.body.password === foundUser.password) {
+        //Check password match only for bcrypted passwords
+        // if (bcrypt.compareSync(req.body.password, foundUser.password)) {
+        //Check password match for both bcrypt and non brcypted passwords
+          if(req.body.password === foundUser.password) {
           console.log(req.body.email);
           res.redirect("/homeServices/sellItems");
       } else {
-        res.send("Wrong Password");
+        res.send("wrong Password");
       }
     }
     else {
@@ -50,10 +53,15 @@ router.get("/", (req, res) => {
 
 //CREATE(POST) for REGISTER
 router.post("/register", (req, res) => {
+  req.body.password = bcrypt.hashSync(
+    req.body.password,
+    bcrypt.genSaltSync(10)
+);
   userModel.create(req.body, (err, createdUser) => {
     console.log(req.body);
     if (err) {
-      console.log("err");
+      console.log(createdUser);
+      res.send("Email address has already been used by another account");
     } else {
       // res.send('createdUser')
       res.redirect("/users/login");
@@ -61,5 +69,10 @@ router.post("/register", (req, res) => {
   });
 });
 
+// sessions.delete('/logout', (req, res) => {
+// 	req.session.destroy(() => {
+// 		res.redirect('/');
+// 	});
+// });
 //Export Module
 module.exports = router;
