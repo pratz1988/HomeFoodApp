@@ -29,8 +29,8 @@ bulma.min.css"
       text-align: right;
     }
     .videoClass {
-      width: 100%;
-      height: 500px;
+      width: 100vw;
+      height: 600px;
       outline: 2px solid white;
       overflow: scroll;
       margin: 0 auto;
@@ -41,6 +41,10 @@ bulma.min.css"
       margin-top: 10px;
       width: 100%;
       height: 430px;
+    }
+    .video2 {
+      width: 100%;
+
     }
     .marketplace1 {
       width: 600px;
@@ -54,11 +58,12 @@ bulma.min.css"
       font-weight: 600;
       font-size: 20px;
       margin-bottom: 20px;
+      margin-left: 190px;
     }
     .marketplaceP {
       text-align: start;
       width: 400px;
-      margin-left: 120px;
+      margin-left: 220px;
       background-color: transparent;
     }
     .otherServices {
@@ -176,7 +181,7 @@ bulma.min.css"
     <!------------- Video ----------->
     <header class="videoClass">
       <div class="video1">
-        <video autoplay loop>
+        <video class="video2" autoplay loop>
           <source src="/video/food.mp4" type="video/mp4" />
           <!-- <source src="movie.ogg" type="video/ogg"> -->
         </video>
@@ -186,7 +191,7 @@ bulma.min.css"
     <!------------------ main content Other Services--------------------->
     <div class="marketplace1 container">
       <div class="marketplace2">
-        <h1>Home Services Made Simple</h1>
+        <h1 class="center">Home Services Made Simple</h1>
         <p class="marketplaceP">
           A modern marketplace for home food, maid services and child care
           services. As a home user, you can advertise your services here and buy
@@ -219,7 +224,7 @@ bulma.min.css"
         />
       </div>
     </div>
-<!-- maid service -->
+    <!-- maid service -->
     <div class="columns otherServices container">
       <div class="column otherServicesDiv">
         <img
@@ -244,7 +249,7 @@ bulma.min.css"
         </div>
       </div>
     </div>
-<!-- Child Care -->
+    <!-- Child Care -->
     <div class="columns otherServices container">
       <div class="column otherServicesDiv">
         <h2>Child Care Services</h2>
