@@ -9,7 +9,7 @@ There are two workflows in this app
  - From a consumer perspective, you can browse all the various services that are available and get all the necessary informaiton about them
 
 # Tech behind this
-The app is built in Express, Node.js, EJS, HTML, CSS and MongoDB. It uses 'Bulma' CSS framework.
+The app is built in Express.js, Node.js, RestFul API, EJS, HTML, CSS and MongoDB. It uses 'Bulma' CSS framework.
 
 # Future enhancements / Known issues
 
