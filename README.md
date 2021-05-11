@@ -1,6 +1,6 @@
 # Home Services 
 
-I built the Home Services web application as part of my GA ( General Assembly ) SEI bootcamp. The Home Services application is aimed at providing a market place for home based services, like food, child care & maid services. This is built in HTML, CSS, Express.js, Node.js, mongoDB . 
+The Home Services application is aimed at providing a market place for home based services, like food, child care & maid services. This is built in HTML, CSS, Express.js, Node.js, mongoDB . 
 
 # How it works
 
@@ -22,4 +22,4 @@ Enhancements
 
 # About the author
 
-prathyusha.jaddu@gmail.com
+Prathyusha
